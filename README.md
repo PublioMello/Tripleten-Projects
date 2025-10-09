@@ -11,12 +11,12 @@ The portfolio is organized by learning modules and project types:
 text
 Tripleten-Projects/
 │
-├── foundation-projects/      # Introductory web development projects
-├── frontend-projects/        # React and interactive web applications
-├── backend-projects/         # Server-side and API development
-├── database-projects/        # Data persistence and management
-├── fullstack-projects/       # Complete full-stack applications
-└── advanced-projects/        # Capstone and complex projects
+├── foundation-projects/ # Introductory web development projects
+├── frontend-projects/ # React and interactive web applications
+├── backend-projects/ # Server-side and API development
+├── database-projects/ # Data persistence and management
+├── fullstack-projects/ # Complete full-stack applications
+└── advanced-projects/ # Capstone and complex projects
 
 🛠️ Technologies & Skills
 
@@ -75,17 +75,12 @@ Follow the setup instructions to run locally
 
 📈 Progress Tracking
 
-Total Projects Completed: 1/18 Sprints 
+Total Projects Completed: 1/18 Sprints
 Current Focus: Front-end
 Last Updated: 09/10/2025
 
 📞 Connect With Me
 
 LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
-Portfolio: https://github.com/PublioMello 
+Portfolio: https://github.com/PublioMello
 Email: publio.lima.mello@gmail.com
-
- 
- Personal Portfolio Website]
-Email: [Your email address]
-  
