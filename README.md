@@ -85,6 +85,7 @@ LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
 Portfolio: https://github.com/PublioMello 
 Email: publio.lima.mello@gmail.com
 
-LinkedIn: [Your LinkedIn Profile]
-Portfolio: [Your Personal Portfolio Website]
+ 
+ Personal Portfolio Website]
 Email: [Your email address]
+  
