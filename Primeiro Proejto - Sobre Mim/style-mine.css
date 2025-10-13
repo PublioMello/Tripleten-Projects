@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Permanent Marker";
+  src: url(./fonts/PermanentMarker.ttf) format("truetype"),
+    url(./fonts/PermanentMarker.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter.ttf) format("truetype");
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Inter", sans-serif;
+  background: #eeeeee;
+}
+
+.header {
+  height: 60vh;
+  background-image: url(/images/header-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 90px;
+  line-height: 140px;
+  color: #ffff;
+  text-transform: uppercase;
+  max-width: 1240px;
+  margin: auto;
+  text-align: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 790px;
+  margin: 100px auto 50px;
+}
+
+.card {
+  width: 350px;
+  margin-bottom: 60px;
+  padding: 45px 45px 70px;
+  background: #ffff;
+  box-shadow: 4px 4px 5px rgba(0, 132, 255, 0.4);
+}
+
+.card h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 16px;
+}
+
+.card-image {
+  height: 200px;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  min-height: 100px;
+  background-color: #000000;
+}
+
+.footer p {
+  font-size: 24px;
+  color: #ffff;
+  margin: auto;
+}
