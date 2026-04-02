@@ -15,6 +15,7 @@ Throughout this journey, I applied key concepts such as:
 
 🧠 Project Evolution
 These projects clearly reflect my growth as a developer:
+
 - Started with basic HTML, CSS, and JavaScript
 - Moved to modular code structure
 - Introduced Object-Oriented Programming (classes)
