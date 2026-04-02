@@ -1,86 +1,135 @@
-A growing collection of projects completed during my Tripleten Software Engineering Bootcamp. This repository documents my journey from learning fundamental programming concepts to building full-stack applications.
+🚀 Software Engineering Portfolio (TripleTen Projects)
+🧑‍💻 About Me
 
-📚 About This Portfolio
+Hi! My name is Publio Mello, and I am a Data Analyst transitioning into Software Engineering, with a focus on Backend Engineering and Data Engineering.
 
-This repository serves as a comprehensive record of my development journey through the Tripleten bootcamp. It contains various projects that demonstrate my evolving skills in web development, from basic front-end technologies to complex full-stack applications.
+This repository showcases projects developed during the TripleTen Software Engineering Bootcamp, where I progressed from basic front-end development to building full-stack applications using React and Node.js.
 
-🗂️ Repository Structure
+Throughout this journey, I applied key concepts such as:
 
-The portfolio is organized by learning modules and project types:
+- Web application structure
+- Object-Oriented Programming (OOP)
+- API integration
+- State management (React)
+- Application architecture and scalability
 
-text
-Tripleten-Projects/
-│
-├── foundation-projects/ # Introductory web development projects
-├── frontend-projects/ # React and interactive web applications
-├── backend-projects/ # Server-side and API development
-├── database-projects/ # Data persistence and management
-├── fullstack-projects/ # Complete full-stack applications
-└── advanced-projects/ # Capstone and complex projects
+🧠 Project Evolution
 
-🛠️ Technologies & Skills
+These projects clearly reflect my growth as a developer:
+🔹 Started with basic HTML, CSS, and JavaScript
+🔹 Moved to modular code structure
+🔹 Introduced Object-Oriented Programming (classes)
+🔹 Transitioned to React (component-based architecture)
+🔹 Integrated with APIs
+🔹 Built backend services using Node.js and Express
 
-Through my bootcamp journey, I'm developing expertise in:
-
-Frontend Development
-
-HTML5, CSS3, JavaScript (ES6+)
-React.js and modern frontend frameworks
-Responsive web design and CSS methodologies
-User interface design and implementation
-
-Backend Development
-
-Node.js and Express.js
-RESTful API design and development
-Authentication and authorization systems
-Server-side logic and architecture
-Data Management
-
-Database design and modeling
-SQL and NoSQL databases
-Data validation and security
-API integration and data fetching
-Development Practices
-
-Version control with Git and GitHub
-Agile development methodologies
-Testing and debugging
-Deployment and DevOps basics
-
-🎯 Learning Objectives
-
-This portfolio represents my progression through comprehensive software engineering topics:
-
-Foundational Skills: HTML, CSS, JavaScript fundamentals
-Frontend Mastery: Modern frameworks and user experience
-Backend Development: Server architecture and API design
-Full-Stack Integration: Connecting frontend and backend systems
-Advanced Concepts: Performance optimization, security, scalability
+👉 This progression demonstrates my ability to evolve from simple static pages to scalable, production-like applications.
 
 🏃‍♂️ Exploring Projects
 
-Each project folder contains its own detailed README with:
+📌 About Me Page
+🔗 https://github.com/PublioMello/Tripleten-Projects/tree/main/Primeiro%20Proejto%20-%20Sobre%20Mim
 
-Project description and objectives
-Installation and setup instructions
-Technologies used
-Key features and functionality
-Learning outcomes and challenges
-To explore any project:
+- Basic HTML & CSS
+- First web structure
+- Introduction to development
 
-Navigate to the project folder
-Read the project-specific README.md
-Follow the setup instructions to run locally
+📚 Web Project Library
+🔗 https://github.com/PublioMello/web_project_library
+🔗 https://github.com/PublioMello/web_project_library_pt
 
-📈 Progress Tracking
+- Responsive layout
+- Clean CSS practices
+- Structured content display
 
-Total Projects Completed: 1/18 Sprints
-Current Focus: Front-end
+☕ Coffee Shop
+🔗 https://github.com/PublioMello/web_project_coffeeshop
+
+- Improved UI/UX
+- More polished design
+- Better layout structure
+
+🌍 Homeland
+🔗 web_project_homeland
+
+- Modern responsive design
+- Advanced layout techniques
+- Section organization
+
+💰 Expenses Tracker
+🔗 https://github.com/PublioMello/web_project_expenses_pt
+
+- JavaScript data manipulation
+- Interactive features
+- Dynamic UI behavior
+
+🧩 Around Project (Core Learning Project)
+
+🔹 JavaScript Version (OOP)
+🔗 https://github.com/PublioMello/web_project_around_pt
+
+Highlights:
+
+- DOM manipulation
+- Modular structure
+- Introduction to OOP
+
+🔹 Refactoring with Classes (Sprint 11)
+🔗 https://github.com/PublioMello/Tripleten-Projects/tree/main/web_project_around_pt_sprint_11
+
+Key improvements:
+
+- Created reusable classes:
+- Section → rendering lists of elements
+- Popup → modal handling
+- PopupWithImage
+- PopupWithForm
+- UserInfo
+- Clear separation of responsibilities
+- More scalable and maintainable code
+
+🔹 React Version (Sprint 13 & 14)
+🔗 https://github.com/PublioMello/web_project_around_react
+
+Key features:
+
+- Fully component-based architecture
+- State management using useState and useEffect
+- Global state using Context API
+- API integration
+
+💡 Example of implemented logic:
+
+- Fetching cards from API
+- Handling likes/unlikes dynamically
+- Managing user data globally
+
+⚙️ Back-End Projects
+🚀 Around API (Node.js + Express)
+🔗 https://github.com/PublioMello/web_project_around_express
+
+- REST API development
+- CRUD operations
+- Integration with frontend
+- Backend architecture fundamentals
+
+🧠 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React.js
+- Node.js
+- Express
+- Git & GitHub
+  📈 Progress Tracking
+
+Total Projects Completed: 16/18 Sprints
+Finished Projects: Front-end
+Current Focus: Back-end, Full-stack
 Last Updated: 09/10/2025
 
 📞 Connect With Me
-
 LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
 Portfolio: https://github.com/PublioMello
 Email: publio.lima.mello@gmail.com
