@@ -14,16 +14,13 @@ Throughout this journey, I applied key concepts such as:
 - Application architecture and scalability
 
 🧠 Project Evolution
-
 These projects clearly reflect my growth as a developer:
-🔹 Started with basic HTML, CSS, and JavaScript
-🔹 Moved to modular code structure
-🔹 Introduced Object-Oriented Programming (classes)
-🔹 Transitioned to React (component-based architecture)
-🔹 Integrated with APIs
-🔹 Built backend services using Node.js and Express
-
-👉 This progression demonstrates my ability to evolve from simple static pages to scalable, production-like applications.
+- Started with basic HTML, CSS, and JavaScript
+- Moved to modular code structure
+- Introduced Object-Oriented Programming (classes)
+- Transitioned to React (component-based architecture)
+- Integrated with APIs
+- Built backend services using Node.js and Express
 
 🏃‍♂️ Exploring Projects
 
