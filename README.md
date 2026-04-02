@@ -121,12 +121,13 @@ Key features:
 - Node.js
 - Express
 - Git & GitHub
-  📈 Progress Tracking
 
-Total Projects Completed: 16/18 Sprints
-Finished Projects: Front-end
-Current Focus: Back-end, Full-stack
-Last Updated: 09/10/2025
+📈 Progress Tracking
+
+- Total Projects Completed: 16/18 Sprints
+- Finished Projects: Front-end
+- Current Focus: Back-end, Full-stack
+- Last Updated: 09/10/2025
 
 📞 Connect With Me
 LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
