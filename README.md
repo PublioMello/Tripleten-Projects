@@ -1,7 +1,7 @@
 🚀 Software Engineering Portfolio (TripleTen Projects)
 🧑‍💻 About Me
 
-Hi! My name is Publio Mello, and I am a Data Analyst transitioning into Software Engineering, with a focus on Backend Engineering and Data Engineering.
+Hi! My name is Publio Mello, and I am a Mehcanical Engineer transitioning into Software Engineering, with a focus on Backend Engineering and Data Engineering.
 
 This repository showcases projects developed during the TripleTen Software Engineering Bootcamp, where I progressed from basic front-end development to building full-stack applications using React and Node.js.
 
