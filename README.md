@@ -130,6 +130,6 @@ Key features:
 - Last Updated: 09/10/2025
 
 📞 Connect With Me
-LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
-Portfolio: https://github.com/PublioMello
-Email: publio.lima.mello@gmail.com
+- LinkedIn: https://www.linkedin.com/in/publio-filho-68b715a4/
+- Portfolio: https://github.com/PublioMello
+- Email: publio.lima.mello@gmail.com
