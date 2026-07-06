@@ -1,0 +1,98 @@
+.header {
+  width: 100%;
+}
+
+/* ── Nav bar ──────────────────────────────── */
+.header__nav-bar {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* On main page the nav sits directly above the hero – no bottom border */
+.header__nav-bar_over-hero {
+  border-bottom: none;
+}
+
+/* On saved-news the nav is the only header element – show separator */
+.header__nav-bar_light {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/* ── Dark hero (main page only) ───────────── */
+.header__hero {
+  background-color: #1a1b22;
+  background-image:
+    linear-gradient(rgba(26, 27, 34, 0.64), rgba(26, 27, 34, 0.64)),
+    url('/images/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 80px;
+}
+
+/* ── Shared container ─────────────────────── */
+.header__container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header__content {
+  padding-top: 80px;
+}
+
+.header__title {
+  font-family: 'RobotoSlab', Georgia, serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 64px;
+  color: #ffffff;
+  margin: 0 0 32px;
+  max-width: 608px;
+}
+
+.header__subtitle {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 88px;
+  max-width: 608px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__container {
+    padding: 0 16px;
+  }
+
+  .header__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .header__subtitle {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__hero {
+    padding-bottom: 40px;
+  }
+
+  .header__content {
+    padding-top: 30px;
+  }
+
+  .header__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+}

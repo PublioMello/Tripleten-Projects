@@ -1,0 +1,177 @@
+.news-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px rgba(14, 26, 57, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0 10px 32px rgba(14, 26, 57, 0.15);
+  transform: translateY(-4px);
+}
+
+.news-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.news-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 272px;
+  overflow: hidden;
+  background-color: #e6e8eb;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.news-card:hover .news-card__image {
+  transform: scale(1.04);
+}
+
+.news-card__keyword {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 8px 22px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1b22;
+}
+
+.news-card__action-wrapper {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.news-card__action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  transition: background-color 0.2s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z' stroke='%231a1b22' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+}
+
+.news-card__action-btn:hover {
+  background-color: #f5f6f7;
+}
+
+.news-card__action-btn_saved {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z' fill='%232f71e5'/%3E%3C/svg%3E");
+}
+
+.news-card__action-btn_delete {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 18L18 6M6 6l12 12' stroke='%231a1b22' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.news-card__tooltip {
+  display: block;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #1a1b22;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(14, 26, 57, 0.12);
+}
+
+.news-card__info {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-card__date {
+  display: block;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  margin-bottom: 12px;
+}
+
+.news-card__title {
+  font-family: 'RobotoSlab', Georgia, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  color: #1a1b22;
+  margin: 0 0 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.news-card__text {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  margin: 0 0 auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  padding-bottom: 16px;
+}
+
+.news-card__source {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b6bcbf;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .news-card__image-wrapper {
+    height: 212px;
+  }
+
+  .news-card__title {
+    font-size: 18px;
+  }
+
+  .news-card__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .news-card__date {
+    font-size: 14px;
+  }
+}

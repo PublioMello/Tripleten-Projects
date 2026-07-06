@@ -1,0 +1,181 @@
+.navigation {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 66px;
+}
+
+.navigation__logo {
+  font-family: 'RobotoSlab', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1a1b22;
+  flex-shrink: 0;
+  align-self: center;
+  transition: opacity 0.2s ease;
+}
+
+.navigation__logo:hover {
+  opacity: 0.7;
+}
+
+/* kept for saved-news page (isDark=false passed by Header) */
+.navigation__logo_white { color: #ffffff; }
+.navigation__logo_dark  { color: #1a1b22; }
+
+.navigation__links {
+  display: flex;
+  align-items: stretch;
+}
+
+.navigation__link {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.navigation__link_white { color: #ffffff; }
+.navigation__link_dark  { color: #1a1b22; }
+
+/* Active link gets blue underline on white nav */
+.navigation__link_active {
+  border-bottom-color: #2f71e5;
+}
+
+/* Override: white underline if nav is on dark bg (not currently used) */
+.navigation__link_active.navigation__link_white {
+  border-bottom-color: #ffffff;
+}
+
+.navigation__link:hover {
+  opacity: 0.7;
+}
+
+/* ── Auth button ──────────────────────────── */
+.navigation__auth-btn {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 8px 24px;
+  border-radius: 100px;
+  margin-left: 8px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  color: #1a1b22;
+  border: 1px solid #1a1b22;
+}
+
+.navigation__auth-btn:hover {
+  background-color: rgba(26, 27, 34, 0.06);
+}
+
+/* White variant kept for any dark-bg nav usage */
+.navigation__auth-btn_white {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.navigation__auth-btn_white:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navigation__auth-btn_dark {
+  color: #1a1b22;
+  border-color: #1a1b22;
+}
+
+/* ── Logout icon ──────────────────────────── */
+.navigation__logout-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1b22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4'/%3E%3Cpolyline points='16 17 21 12 16 7'/%3E%3Cline x1='21' y1='12' x2='9' y2='12'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation__logout-icon_white {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4'/%3E%3Cpolyline points='16 17 21 12 16 7'/%3E%3Cline x1='21' y1='12' x2='9' y2='12'/%3E%3C/svg%3E");
+}
+
+/* ── Hamburger ────────────────────────────── */
+.navigation__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navigation__burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #1a1b22;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navigation__burger_white span { background-color: #ffffff; }
+.navigation__burger_dark span  { background-color: #1a1b22; }
+
+.navigation__burger_active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.navigation__burger_active span:nth-child(2) { opacity: 0; }
+.navigation__burger_active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ── Mobile ───────────────────────────────── */
+@media screen and (max-width: 767px) {
+  .navigation {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .navigation__burger {
+    display: flex;
+  }
+
+  .navigation__links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+
+  .navigation__links_open {
+    display: flex;
+  }
+
+  .navigation__link {
+    padding: 14px 0;
+    border-bottom: none;
+    width: 100%;
+  }
+
+  .navigation__auth-btn {
+    margin-top: 8px;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 24px;
+  }
+}

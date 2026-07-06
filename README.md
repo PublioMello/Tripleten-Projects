@@ -94,7 +94,7 @@ Key features:
 
 - Fully component-based architecture
 - State management using useState and useEffect
-- Global state using Context API
+- Global state using Context APIgit
 - API integration
 
 💡 Example of implemented logic:
