@@ -4,7 +4,6 @@
   flex-direction: column;
 }
 
-/* Shared status section: "nothing found" + "error" */
 .main__status {
   display: flex;
   flex-direction: column;

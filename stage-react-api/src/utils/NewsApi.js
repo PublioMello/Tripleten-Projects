@@ -1,5 +1,3 @@
-// Development: Vite proxies /v2 → https://newsapi.org (avoids CORS)
-// Production:  TripleTen proxy handles CORS for deployed builds
 const BASE_URL = import.meta.env.PROD
   ? 'https://nomoreparties.co/news/v2'
   : '/v2';

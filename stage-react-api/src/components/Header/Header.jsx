@@ -6,7 +6,6 @@ import SearchForm from '../SearchForm/SearchForm';
 function Header({ isLoggedIn, currentUser, onLoginClick, onLogout, onSearch, isDark }) {
   return (
     <header className="header">
-      {/* Nav bar: always white, regardless of page */}
       <div className={`header__nav-bar ${isDark ? 'header__nav-bar_over-hero' : 'header__nav-bar_light'}`}>
         <div className="header__container">
           <Navigation
@@ -19,7 +18,6 @@ function Header({ isLoggedIn, currentUser, onLoginClick, onLogout, onSearch, isD
         </div>
       </div>
 
-      {/* Dark hero: only on main page */}
       {isDark && (
         <div className="header__hero">
           <div className="header__container">

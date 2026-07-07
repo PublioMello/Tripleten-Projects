@@ -20,7 +20,6 @@ function App() {
   const [searchError, setSearchError] = useState(false);
   const [activePopup, setActivePopup] = useState('');
 
-  // Restore search results from localStorage on first mount
   useEffect(() => {
     try {
       const storedResults = localStorage.getItem(STORAGE_KEY_RESULTS);
@@ -34,7 +33,6 @@ function App() {
     }
   }, []);
 
-  // Close popup on Escape key
   const handleOpenLoginPopup = () => setActivePopup('login');
   const handleOpenRegisterPopup = () => setActivePopup('register');
   const handleClosePopup = () => setActivePopup('');
@@ -49,14 +47,12 @@ function App() {
   }, [activePopup]);
 
   const handleLogin = ({ email, password }) => {
-    // Will be connected to backend in a future phase
     setIsLoggedIn(true);
     setCurrentUser({ name: 'Usuário', email });
     handleClosePopup();
   };
 
   const handleRegister = ({ email, password, name }) => {
-    // Will be connected to backend in a future phase
     setActivePopup('success');
   };
 
@@ -80,7 +76,6 @@ function App() {
         }));
         setSearchResults(articles);
         setHasSearched(true);
-        // Persist to localStorage so results survive page refresh
         localStorage.setItem(STORAGE_KEY_RESULTS, JSON.stringify(articles));
         localStorage.setItem(STORAGE_KEY_KEYWORD, keyword);
       })
@@ -98,7 +93,6 @@ function App() {
       handleOpenLoginPopup();
       return;
     }
-    // Will send POST /articles to backend in a future phase
     setSavedArticles((prev) => [
       ...prev,
       { ...article, _id: Date.now().toString() },
@@ -106,7 +100,6 @@ function App() {
   };
 
   const handleDeleteArticle = (articleId) => {
-    // Will send DELETE /articles/:id to backend in a future phase
     setSavedArticles((prev) => prev.filter((a) => a._id !== articleId));
   };
 

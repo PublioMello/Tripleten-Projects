@@ -26,7 +26,6 @@
   box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* X positioned at top-right corner, partially outside the box */
 .popup__close-btn {
   position: absolute;
   top: -40px;
@@ -124,7 +123,6 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Blue & clickable only when not disabled */
 .popup__submit-btn:not(:disabled) {
   background-color: #2f71e5;
   color: #ffffff;

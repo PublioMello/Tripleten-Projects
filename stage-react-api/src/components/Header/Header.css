@@ -2,23 +2,19 @@
   width: 100%;
 }
 
-/* ── Nav bar ──────────────────────────────── */
 .header__nav-bar {
   background-color: #ffffff;
   width: 100%;
 }
 
-/* On main page the nav sits directly above the hero – no bottom border */
 .header__nav-bar_over-hero {
   border-bottom: none;
 }
 
-/* On saved-news the nav is the only header element – show separator */
 .header__nav-bar_light {
   border-bottom: 1px solid #d8d8d8;
 }
 
-/* ── Dark hero (main page only) ───────────── */
 .header__hero {
   background-color: #1a1b22;
   background-image:
@@ -29,7 +25,6 @@
   padding-bottom: 80px;
 }
 
-/* ── Shared container ─────────────────────── */
 .header__container {
   max-width: 1232px;
   margin: 0 auto;
