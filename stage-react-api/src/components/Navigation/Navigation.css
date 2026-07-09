@@ -28,6 +28,11 @@
   align-items: stretch;
 }
 
+.navigation__links li {
+  display: flex;
+  align-items: center;
+}
+
 .navigation__link {
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 500;

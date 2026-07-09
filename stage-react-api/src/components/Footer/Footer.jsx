@@ -1,12 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <p className="footer__copyright">© 2024 NewsExplorer, Powered by News API</p>
+        <p className="footer__copyright">
+          © 2024 NewsExplorer, Powered by News API
+        </p>
         <nav className="footer__nav" aria-label="Rodapé">
           <ul className="footer__nav-links">
             <li>
@@ -29,7 +31,7 @@ function Footer() {
             <li>
               <a
                 className="footer__social-link footer__social-link_github"
-                href="https://github.com"
+                href="https://github.com/PublioMello"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -38,7 +40,7 @@ function Footer() {
             <li>
               <a
                 className="footer__social-link footer__social-link_fb"
-                href="https://facebook.com"
+                href="https://facebook.com/publio.filho.5"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

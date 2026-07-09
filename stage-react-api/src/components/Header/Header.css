@@ -19,7 +19,7 @@
   background-color: #1a1b22;
   background-image:
     linear-gradient(rgba(26, 27, 34, 0.64), rgba(26, 27, 34, 0.64)),
-    url('/images/header-bg.jpg');
+    url('/images/header-bg.svg');
   background-size: cover;
   background-position: center;
   padding-bottom: 80px;
