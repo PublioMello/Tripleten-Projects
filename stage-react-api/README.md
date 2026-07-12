@@ -2,6 +2,8 @@
 
 News Explorer is a React application for searching recent news articles, viewing results, and saving articles to a personal saved-news page. It was built as a TripleTen React/API stage project with Vite, React Router, NewsAPI integration, responsive layouts, and modal authentication flows.
 
+**Live demo:** https://tripleten-projects-odyvwpns1-publio-filho-s-projects.vercel.app/
+
 ## Features
 
 - Search for news articles by keyword.
