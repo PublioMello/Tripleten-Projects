@@ -8,6 +8,8 @@ function PopupWithForm({
   onRegister,
   onSwitchToRegister,
   onSwitchToLogin,
+  serverError,
+  isSubmitting,
 }) {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registerData, setRegisterData] = useState({ email: '', password: '', name: '' });
@@ -102,10 +104,11 @@ function PopupWithForm({
                   <span className="popup__error">{loginErrors.password}</span>
                 )}
               </label>
+              {serverError && <span className="popup__error">{serverError}</span>}
               <button
                 className="popup__submit-btn"
                 type="submit"
-                disabled={!loginData.email.trim() || !loginData.password.trim()}
+                disabled={!loginData.email.trim() || !loginData.password.trim() || isSubmitting}
               >
                 Entrar
               </button>
@@ -175,13 +178,15 @@ function PopupWithForm({
                   <span className="popup__error">{registerErrors.name}</span>
                 )}
               </label>
+              {serverError && <span className="popup__error">{serverError}</span>}
               <button
                 className="popup__submit-btn"
                 type="submit"
                 disabled={
                   !registerData.email.trim() ||
                   !registerData.password.trim() ||
-                  !registerData.name.trim()
+                  !registerData.name.trim() ||
+                  isSubmitting
                 }
               >
                 Inscrever-se

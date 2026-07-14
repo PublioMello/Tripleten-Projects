@@ -6,9 +6,30 @@ import SavedNews from '../SavedNews/SavedNews';
 import Footer from '../Footer/Footer';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import { getNews } from '../../utils/NewsApi';
+import {
+  register,
+  login,
+  checkToken,
+  logout,
+  getSavedArticles,
+  saveArticle,
+  deleteArticle,
+} from '../../utils/api';
 
 const STORAGE_KEY_RESULTS = 'newsExplorer_searchResults';
 const STORAGE_KEY_KEYWORD = 'newsExplorer_lastKeyword';
+
+function toArticlePayload(article) {
+  return {
+    keyword: article.keyword,
+    title: article.title,
+    text: article.description,
+    date: article.publishedAt,
+    source: article.source?.name || article.source || '',
+    link: article.url,
+    image: article.urlToImage,
+  };
+}
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -19,6 +40,8 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false);
   const [searchError, setSearchError] = useState(false);
   const [activePopup, setActivePopup] = useState('');
+  const [authError, setAuthError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     try {
@@ -33,9 +56,29 @@ function App() {
     }
   }, []);
 
-  const handleOpenLoginPopup = () => setActivePopup('login');
-  const handleOpenRegisterPopup = () => setActivePopup('register');
-  const handleClosePopup = () => setActivePopup('');
+  useEffect(() => {
+    checkToken()
+      .then((user) => {
+        setIsLoggedIn(true);
+        setCurrentUser(user);
+        return getSavedArticles();
+      })
+      .then((articles) => setSavedArticles(articles || []))
+      .catch(() => {});
+  }, []);
+
+  const handleOpenLoginPopup = () => {
+    setAuthError('');
+    setActivePopup('login');
+  };
+  const handleOpenRegisterPopup = () => {
+    setAuthError('');
+    setActivePopup('register');
+  };
+  const handleClosePopup = () => {
+    setAuthError('');
+    setActivePopup('');
+  };
 
   useEffect(() => {
     if (!activePopup) return;
@@ -47,19 +90,35 @@ function App() {
   }, [activePopup]);
 
   const handleLogin = ({ email, password }) => {
-    setIsLoggedIn(true);
-    setCurrentUser({ name: 'Usuário', email });
-    handleClosePopup();
+    setAuthError('');
+    setIsSubmitting(true);
+    login({ email, password })
+      .then((user) => {
+        setIsLoggedIn(true);
+        setCurrentUser(user);
+        setActivePopup('');
+        return getSavedArticles();
+      })
+      .then((articles) => setSavedArticles(articles || []))
+      .catch((err) => setAuthError(err.message || 'E-mail ou senha incorretos.'))
+      .finally(() => setIsSubmitting(false));
   };
 
   const handleRegister = ({ email, password, name }) => {
-    setActivePopup('success');
+    setAuthError('');
+    setIsSubmitting(true);
+    register({ email, password, name })
+      .then(() => setActivePopup('success'))
+      .catch((err) => setAuthError(err.message || 'Não foi possível concluir o registro.'))
+      .finally(() => setIsSubmitting(false));
   };
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    setCurrentUser(null);
-    setSavedArticles([]);
+    logout().finally(() => {
+      setIsLoggedIn(false);
+      setCurrentUser(null);
+      setSavedArticles([]);
+    });
   };
 
   const handleSearch = (keyword) => {
@@ -93,18 +152,19 @@ function App() {
       handleOpenLoginPopup();
       return;
     }
-    setSavedArticles((prev) => [
-      ...prev,
-      { ...article, _id: Date.now().toString() },
-    ]);
+    saveArticle(toArticlePayload(article))
+      .then((saved) => setSavedArticles((prev) => [...prev, saved]))
+      .catch((err) => console.error('Não foi possível salvar o artigo:', err.message));
   };
 
   const handleDeleteArticle = (articleId) => {
-    setSavedArticles((prev) => prev.filter((a) => a._id !== articleId));
+    deleteArticle(articleId)
+      .then(() => setSavedArticles((prev) => prev.filter((a) => a._id !== articleId)))
+      .catch((err) => console.error('Não foi possível remover o artigo:', err.message));
   };
 
   const isArticleSaved = (article) =>
-    savedArticles.some((a) => a.url === article.url);
+    savedArticles.some((a) => a.link === article.url);
 
   return (
     <BrowserRouter>
@@ -150,6 +210,8 @@ function App() {
           onRegister={handleRegister}
           onSwitchToRegister={handleOpenRegisterPopup}
           onSwitchToLogin={handleOpenLoginPopup}
+          serverError={authError}
+          isSubmitting={isSubmitting}
         />
       </div>
     </BrowserRouter>

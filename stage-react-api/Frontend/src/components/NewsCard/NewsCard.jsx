@@ -18,19 +18,23 @@ function NewsCard({ article, onSaveArticle, onDeleteArticle, isSaved, isLoggedIn
     onSaveArticle(article);
   };
 
-  const formattedDate = article.publishedAt
-    ? new Date(article.publishedAt).toLocaleDateString('pt-BR', {
+  const articleDate = article.publishedAt || article.date;
+  const formattedDate = articleDate
+    ? new Date(articleDate).toLocaleDateString('pt-BR', {
         day: 'numeric',
         month: 'long',
         year: 'numeric',
       })
     : '';
+  const articleUrl = article.url || article.link;
+  const articleImage = article.urlToImage || article.image;
+  const articleText = article.description || article.text;
 
   return (
     <article className="news-card">
       <a
         className="news-card__link"
-        href={article.url}
+        href={articleUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Ler artigo: ${article.title}`}
@@ -38,7 +42,7 @@ function NewsCard({ article, onSaveArticle, onDeleteArticle, isSaved, isLoggedIn
         <div className="news-card__image-wrapper">
           <img
             className="news-card__image"
-            src={article.urlToImage || '/images/card-placeholder.svg'}
+            src={articleImage || '/images/card-placeholder.svg'}
             alt={article.title || 'Imagem do artigo'}
             onError={(e) => {
               e.target.src = '/images/card-placeholder.svg';
@@ -71,7 +75,7 @@ function NewsCard({ article, onSaveArticle, onDeleteArticle, isSaved, isLoggedIn
         <div className="news-card__info">
           <time className="news-card__date">{formattedDate}</time>
           <h3 className="news-card__title">{article.title}</h3>
-          <p className="news-card__text">{article.description}</p>
+          <p className="news-card__text">{articleText}</p>
           <p className="news-card__source">
             {article.source?.name || article.source || ''}
           </p>
