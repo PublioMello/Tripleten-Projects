@@ -162,7 +162,7 @@ Key features:
 ## 🌐 Web Project API Full
 
 🔗 **Live Demo:** https://web-project-api-full-gamma.vercel.app  
-🔗 **Repository:** [Add your GitHub repository link here]
+🔗 **Repository:** https://github.com/PublioMello/web_project_api_full
 
 A full-stack web application developed as the final project of the TripleTen Software Engineering Bootcamp.
 
