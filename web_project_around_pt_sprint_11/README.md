@@ -2,6 +2,8 @@ Tripleten web_project_around_pt
 
 Este repositório contém a implementação do Projeto 8, seguindo todas as especificações e requisitos técnicos definidos no curso. O objetivo é criar uma página interativa com cartões dinâmicos, modais funcionais, validação completa de formulários e manipulação de DOM utilizando JavaScript puro.
 
+🔗 https://vercel.com/publio-filho-s-projects/tripleten-projects-f6zs
+
 🚀 Sobre o Projeto
 O projeto consiste em uma página web composta por cartões gerados dinamicamente, um sistema de pop-ups/modais e funcionalidades completas para criação, edição, visualização e remoção de cards. A interface e as interações foram implementadas seguindo boas práticas de JavaScript, organização de arquivos e estilo de código.
 
