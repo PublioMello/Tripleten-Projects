@@ -81,6 +81,7 @@ These projects clearly reflect my growth as a developer:
 ## 💰 Expenses Tracker
 
 🔗 https://github.com/PublioMello/web_project_expenses_pt
+🔗 https://web-project-expenses-pt.vercel.app/
 
 - JavaScript data manipulation
 - Interactive features
